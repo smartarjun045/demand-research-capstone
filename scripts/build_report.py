@@ -238,7 +238,7 @@ def footer(c, d):
     c.drawString(2.1 * cm, 1.2 * cm, "Day-Type Structure and Forecasting of Daily Demand · preregistered analysis (tag prereg-v1)")
     c.drawRightString(A4[0] - 2.1 * cm, 1.2 * cm, f"Page {d.page}"); c.restoreState()
 doc = BaseDocTemplate(str(ROOT / "reports" / "whitepaper.pdf"), pagesize=A4, leftMargin=2.1 * cm, rightMargin=2.1 * cm, topMargin=1.9 * cm, bottomMargin=1.9 * cm,
-                      title="Day-Type Structure and Short-Horizon Forecasting of Daily Demand", author="Data Science Capstone", subject="Preregistered analysis whitepaper")
+                      title="Day-Type Structure and Short-Horizon Forecasting of Daily Demand", author="Arjun Dongare", subject="Preregistered analysis whitepaper")
 doc.addPageTemplates([PageTemplate(id="p", frames=[Frame(doc.leftMargin, doc.bottomMargin, doc.width, doc.height, id="f")], onPage=footer)])
 doc.build(story)
 print("built", ROOT / "reports" / "whitepaper.pdf")
